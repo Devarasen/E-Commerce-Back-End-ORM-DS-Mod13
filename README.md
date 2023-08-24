@@ -44,9 +44,9 @@ Instructions to run the application:
 4.  Create a `.env` file in the root directory of the project. You can refer to `.env.EXAMPLE` as a guide.
 5.  Add the following to the `.env` file , replacing the values with your own:
 
-DB_NAME='ecommerce_db'
-DB_USER='root'
-DB_PW='password'
+DB_NAME='ecommerce_db'  
+DB_USER='root'  
+DB_PW='password'  
 
 6. Run `mysql -u - root -p` to open the MySQL shell.
 7. Run `source db/schema.sql` to create the database.
