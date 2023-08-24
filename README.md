@@ -6,9 +6,13 @@ E-Commerce Back End ORM DS-Mod13
 
 ## Description
 
-This is a command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+This project is a back-end for an e-commerce site. It uses Express.js API and Sequelize to interact with a MySQL database. I had to configure a working API to use Sequelize to interact with a MySQL database. I utilized the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name. I also had to create database models using Sequelize and model associations to create relationships between them. I had to execute association methods on my Sequelize models to create the following relationships between them:
+- Product belongs to Category.
+- Category has many Product models.
+- Product belongs to many Tag models. 
+- Tag belongs to many Product models.
+I allowed products to have multiple tags and tags to have many products by using the ProductTag through model.
 
-Walkthrough video will show instructions on how to create your own svg logo file using this project. The video will also show the tests being run.
 
 Link: https://drive.google.com/file/d/1JhoCIY9MZ27SQSBAQ5L_h5LlovLavWyL/view?usp=sharing
 
@@ -33,27 +37,14 @@ Project tested on node v16.20.1
 
 ## Usage
 
-1.  Please enter your credentials as approproate in the .env file to connect to sql database.
+Instructions to run the application:
 
-2.  On mysql terminal, run:
-    SOURCE schema.sql
-    SOURCE seeds.sql
+1.  Clone the repository to your local machine.
+2.  Open the terminal and navigate to the root directory of the project.
+3.  Run `npm install` to install the dependencies.
+4.  Create a `.env`.env file in the root directory of the project.
+5.  Add the following to the `.env`.env file , replacing the values with your own:
 
-3.  Open integrated terminal on root and run 'npm start'. A list will show with options:
-
-        View All Departments
-        View All Roles
-        View All Employees
-        View Employee by Manager
-        View Employee By Department
-        Add A Department
-        Add A Role
-        Add An Employee
-        Update An Employee Role
-        Update Employee Manager
-        Quit
-
-4.  Choose preferred options and follow prompts. (refer to walkthrough video for more help)
 
 ## Credits
 
