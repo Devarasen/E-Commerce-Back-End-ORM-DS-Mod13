@@ -6,13 +6,17 @@ E-Commerce Back End ORM DS-Mod13
 
 ## Description
 
-This is a command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+This project is a back-end for an e-commerce site. It uses Express.js API and Sequelize to interact with a MySQL database. I had to configure a working API to use Sequelize to interact with a MySQL database. I utilized the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name. I also had to create database models using Sequelize and model associations to create relationships between them. I had to execute association methods on my Sequelize models to create the following relationships between them:
+- Product belongs to Category.
+- Category has many Product models.
+- Product belongs to many Tag models. 
+- Tag belongs to many Product models.
+I allowed products to have multiple tags and tags to have many products by using the ProductTag through model.
 
-Walkthrough video will show instructions on how to create your own svg logo file using this project. The video will also show the tests being run.
 
-Link: https://drive.google.com/file/d/1JhoCIY9MZ27SQSBAQ5L_h5LlovLavWyL/view?usp=sharing
+Link: 
 
-Github Repo: https://github.com/Devarasen/Employee-Tracker---SQL
+Github Repo: https://github.com/Devarasen/E-Commerce-Back-End-ORM-DS-Mod13#usage
 
 ![Screenshot](./assets/Project%20Screenshot.PNG)
 
@@ -27,33 +31,30 @@ Github Repo: https://github.com/Devarasen/Employee-Tracker---SQL
 
 Dependencies should be installed for code to run properly.
 
-Dependencies used are: - inquirer: v8.2.4 - console.table: ^0.10.0 - dotenv": ^16.3.1 - mysql2": ^2.2.5
+Run `npm install` to install dependencies as specified in package.json for application to run as intended.
 
-Project tested on node v16.20.1
 
 ## Usage
 
-1.  Please enter your credentials as approproate in the .env file to connect to sql database.
+Instructions to run the application:
 
-2.  On mysql terminal, run:
-    SOURCE schema.sql
-    SOURCE seeds.sql
+1.  Clone the repository to your local machine.
+2.  Open the terminal and navigate to the root directory of the project.
+3.  Run `npm install` to install the dependencies.
+4.  Create a `.env` file in the root directory of the project. You can refer to `.env.EXAMPLE` as a guide.
+5.  Add the following to the `.env` file , replacing the values with your own:
 
-3.  Open integrated terminal on root and run 'npm start'. A list will show with options:
+DB_NAME='ecommerce_db'
+DB_USER='root'
+DB_PW='password'
 
-        View All Departments
-        View All Roles
-        View All Employees
-        View Employee by Manager
-        View Employee By Department
-        Add A Department
-        Add A Role
-        Add An Employee
-        Update An Employee Role
-        Update Employee Manager
-        Quit
+6. Run `mysql -u - root -p` to open the MySQL shell.
+7. Run `source db/schema.sql` to create the database.
+8. Run `npm run seed` to seed the database.
+9. Run `npm start` to start the server.
+10. Open Insomnia to test the routes.
 
-4.  Choose preferred options and follow prompts. (refer to walkthrough video for more help)
+
 
 ## Credits
 
