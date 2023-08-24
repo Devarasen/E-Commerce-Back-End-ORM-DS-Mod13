@@ -14,7 +14,7 @@ This project is a back-end for an e-commerce site. It uses Express.js API and Se
 I allowed products to have multiple tags and tags to have many products by using the ProductTag through model.
 
 
-Link: (to be edited)
+Link: https://drive.google.com/file/d/1oVUGQFaxG_nBLCPZY8oQo4H576mJ0y6l/view?usp=sharing
 
 Github Repo: https://github.com/Devarasen/E-Commerce-Back-End-ORM-DS-Mod13#usage
 
